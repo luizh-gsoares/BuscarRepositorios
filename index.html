@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="script.js"> </script>
+    <title>Buscar Repositórios via GitHub API</title>
+</head>
+
+<body>
+    <!-- Seção Buscar Repositório -->
+    <section>
+        <div class="container py-5">
+            <div class="container px-5">
+                <div class="text-center">
+                    <hr>
+                    <h1>Buscar Repositórios</h1>
+                    <hr>
+                    <p class="my-5">Para visualizar os repositórios do GitHub, digite o nome de usuário desejado:</p>
+                    <div class="input-group my-5">
+                        <input type="text" id="usuario-github" class="form-control" placeholder="Digite o nome de usuário do GitHub">
+                        <button class="btn btn-primary" onclick="buscarRepositorios()">Buscar</button>
+                      </div>
+                </div>
+
+                <div id="repo-container" class="row row-cols-1 row-cols-md-3 g-4">
+                </div>
+            </div>
+        </div>
+
+        <div class="my-5 text-center">
+            <a class="btn btn-secondary" type="button" href="https://github.com/luizh-gsoares"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+
+    </section>
+    <!-- Fim da Seção Portfólio -->
+
+    <!-- Arquivos Javascript -->
+    <script>
+        buscarRepositorios();
+    </script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="script.js"> </script>
+
+</body>
+
+</html>
