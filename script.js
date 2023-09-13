@@ -6,7 +6,7 @@
 
 // Faz uma solicitação GET à API do GitHub para obter os repositórios de um determinado usuário.
 function requestRepositorios(usuario) {
-    return $.get(`https://api.github.com/users/${usuario}/repos`);
+    return $.get(`https://api.github.com/users/${usuario}/repos?per_page=100`);
 }
 
 // Cria uma div com todas as informações do repositório recebido. Caso tenha mais informações do repositorio, basta adicionar no HTML.
